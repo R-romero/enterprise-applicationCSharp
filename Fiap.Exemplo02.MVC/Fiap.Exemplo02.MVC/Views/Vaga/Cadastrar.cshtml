@@ -1,0 +1,40 @@
+﻿@model Fiap.Exemplo02.MVC.Models.Vaga
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+@using (Html.BeginForm())
+{
+    if (@ViewBag.msg != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.msg
+        </div>
+    }
+    <div class="form-group">
+        <div class="form-group">
+            @Html.LabelFor(v => v.Cargo)
+            @Html.TextBoxFor(v => v.Cargo, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(v => v.Descricao)
+            @Html.TextAreaFor(v => v.Descricao, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(v => v.Salario)
+            @Html.TextBoxFor(v => v.Salario, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(v => v.Vr)
+            @Html.CheckBoxFor(v => v.Vr)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(v => v.Nivel)
+            @Html.DropDownListFor(v => v.Nivel, ViewBag.options as SelectList, new {@class = "form-control" })
+        </div>
+    </div>
+    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+}
+
