@@ -1,0 +1,16 @@
+﻿@model Exercicio1.Models.Usuario
+@{
+    ViewBag.Title = "Abrir";
+}
+
+<h2>Exibir aluno</h2>
+
+<h3>O nome do Usuário é: @ViewBag.nome</h3>
+<h3>A idade do Usuário é: @Model.Idade</h3>
+<h3>O Email do Usuário é: @ViewBag.email</h3>
+
+<script>
+    alert("@TempData["mensagem"]")
+</script>
+
+

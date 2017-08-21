@@ -1,0 +1,30 @@
+﻿@model Exercicio1.Models.Carro
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <div>
+            @Html.LabelFor(c => c.Placa)
+                @Html.TextBoxFor(c => c.Placa)
+        </div>
+        <div>
+            @Html.LabelFor(c => c.Valor)
+                @Html.TextBoxFor(c => c.Valor)
+        </div>
+        <div>
+            @Html.LabelFor(c => c.ArCondicionado)
+                @Html.CheckBoxFor(c => c.ArCondicionado)
+        </div>
+        <div>
+            @Html.LabelFor(c => c.Descricao)
+                @Html.TextAreaFor(c => c.Descricao)
+        </div>
+    </div>
+    <input type="submit"value="Cadastrar"class="btn btn-primary" />
+}
+

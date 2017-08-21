@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cadastro do Usuário</h2>
+
+<form action="/usuario/abrir" method="post">
+    <div class="form-group">
+        <label for="id-nome">Nome</label>
+            <input type="text" name="nome" id="id-nome" class="form-control"/>
+    </div>
+    <div>
+        <label for="id-idade">Idade</label>
+            <input type="text" name="idade" id="id-idade" class="form-control" />
+    </div>
+    <div>
+        <label for="id-email">Email</label>
+            <input type="text" name="email" id="id-email" class="form-control" />
+    </div>
+    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+</form>

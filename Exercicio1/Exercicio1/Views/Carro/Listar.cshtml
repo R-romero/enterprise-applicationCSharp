@@ -1,0 +1,19 @@
+﻿@model List<Exercicio1.Models.Carro>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table class="table">
+    <tr>
+        <th>Placa</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Placa</td>
+        </tr>
+    }
+</table>
+
