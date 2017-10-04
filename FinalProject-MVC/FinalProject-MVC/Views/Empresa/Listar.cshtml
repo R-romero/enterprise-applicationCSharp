@@ -1,0 +1,20 @@
+﻿@model List<FinalProject_MVC.Models.Empresa>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>Cnpj</th>
+        <th>Razão Social</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <td>@item.Cnpj</td>
+        <td>@item.RazaoSocial</td>
+    }
+
+</table>
